@@ -1,9 +1,11 @@
-// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
 	plugins: [react()],
-	base: '/exifText/', // Changed from '/imgText/' to '/exifText/'
+	base: '/imgText/', // Changed to match repository name
 	build: {
-		outDir: '../dist',
+		outDir: 'dist',
 		emptyOutDir: true
 	}
 });

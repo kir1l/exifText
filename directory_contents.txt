@@ -1,0 +1,14 @@
+public: Empty directory
+public\images: Empty directory
+src: @src\App.css,  @src\App.jsx,  @src\index.css,  @src\main.jsx
+src\assets: Empty directory
+src\assets\images: Empty directory
+src\assets\images\memes: Empty directory
+src\assets\images\nature: Empty directory
+src\components: @src\components\Navigation.jsx
+src\components\ImageGallery: @src\components\ImageGallery\imageGallery.jsx
+src\components\ImageUploader: @src\components\ImageUploader\ImageUploader.jsx
+src\components\KeyInput: @src\components\KeyInput\KeyInput.jsx
+src\components\TextOutput: Empty directory
+src\pages: @src\pages\DecryptPage.jsx,  @src\pages\EncryptPage.jsx,  @src\pages\MainPage.jsx
+src\utils: @src\utils\crypto.js,  @src\utils\exif.js

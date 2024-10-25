@@ -2,11 +2,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({
+export default defineConfig(({ command, mode }) => ({
 	plugins: [react()],
-	base: '/exifText/', // Make sure this matches your repository name
+	base: command === 'build' ? '/exifText/' : '/',
 	build: {
-		outDir: '../dist',
+		outDir: 'dist',
 		emptyOutDir: true
 	}
-});
+}));

@@ -1,6 +1,6 @@
 import React from 'react';
+import { HashRouter as Router } from 'react-router-dom';
 import styled from 'styled-components';
-import { BrowserRouter as Router } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 
 const AppContainer = styled.div`

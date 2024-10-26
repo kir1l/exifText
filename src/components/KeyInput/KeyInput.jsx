@@ -82,12 +82,13 @@ const KeyInput = ({ mode, useKey, setUseKey, keyValue, setKeyValue }) => {
               mode === 'encrypt' ? 'encryption' : 'decryption'
             } key`}
           />
-          <GenerateKeyButton
-            copied={copySuccess}
-            onClick={isKeyGenerated ? handleCopyKey : handleGenerateKey}
-          >
-            {isKeyGenerated ? (copySuccess ? 'Copied!' : 'Copy Key') : 'Generate Key'}
-          </GenerateKeyButton>
+         {mode == 'encrypt' && 
+            <GenerateKeyButton
+               copied={copySuccess}
+               onClick={isKeyGenerated ? handleCopyKey : handleGenerateKey}>
+               {isKeyGenerated ? (copySuccess ? 'Copied!' : 'Copy Key') : 'Generate Key'}
+            </GenerateKeyButton>
+         }     
         </KeyInputGroup>
       )}
     </>

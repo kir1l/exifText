@@ -6,7 +6,7 @@ const CheckboxContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 1rem 0;
+  margin: 10px 0;
 `;
 
 const KeyInputGroup = styled.div`
@@ -38,6 +38,8 @@ const GenerateKeyButton = styled.button`
   }
 `;
 
+
+
 const CopyMessage = styled.span`
   color: #28a745;
   margin-left: 1rem;
@@ -47,17 +49,20 @@ const KeyInput = ({ mode, useKey, setUseKey, keyValue, setKeyValue }) => {
   const [isKeyGenerated, setIsKeyGenerated] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
 
-  const handleGenerateKey = () => {
-    setKeyValue(generateKey());
-    setIsKeyGenerated(true);
-    setCopySuccess(false);
-  };
+   const handleGenerateKey = (e) => {
+      e.preventDefault(); // Prevent form submission
+      setKeyValue(generateKey());
+      setIsKeyGenerated(true);
+      setCopySuccess(false);
+   };
 
-  const handleCopyKey = () => {
-    navigator.clipboard.writeText(keyValue);
-    setCopySuccess(true);
-    setTimeout(() => setCopySuccess(false), 2000);
-  };
+   const handleCopyKey = (e) => {
+      e.preventDefault(); // Prevent form submission
+      navigator.clipboard.writeText(keyValue);
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000);
+   };
+
 
   return (
     <>

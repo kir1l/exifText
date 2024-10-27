@@ -1,11 +1,13 @@
-// src/pages/EncryptPage.jsx
+// src/pages/TextToExifNested/Encrypt.jsx
+
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useOutletContext } from 'react-router-dom';
-import KeyInput from '../components/KeyInput/KeyInput';
-import { encryptText } from '../utils/crypto';
-import { writeExifData } from '../utils/exif';
-import ImageGallery from '../components/ImageGallery/imageGallery';
+import KeyInput from '../../../components/KeyInput/KeyInput';
+import { encryptText } from '../../../utils/crypto';
+import { writeExifData } from '../../../utils/exif';
+import ImageUploader from '../../../components/ImageUploader/ImageUploader';
+import ImageGallery from '../../../components/ImageGallery/imageGallery'
 
 const Container = styled.div`
   max-width: 600px;
@@ -64,6 +66,7 @@ const EncryptPage = () => {
 
   return (
     <Container>
+      <ImageUploader onImageUpload={setImage} image={image} />
       <ImageGallery onSelectImage={setImage} selectedImage={image} />
       <Form onSubmit={handleEncrypt}>
         <KeyInput

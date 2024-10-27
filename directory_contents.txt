@@ -1,14 +1,21 @@
 public: Empty directory
 public\images: Empty directory
+public\images\memes: Empty directory
+public\images\nature: Empty directory
 src: @src\App.css,  @src\App.jsx,  @src\index.css,  @src\main.jsx
 src\assets: Empty directory
 src\assets\images: Empty directory
 src\assets\images\memes: Empty directory
 src\assets\images\nature: Empty directory
 src\components: @src\components\Navigation.jsx
+src\components\Header: @src\components\Header\Header.jsx
 src\components\ImageGallery: @src\components\ImageGallery\imageGallery.jsx
 src\components\ImageUploader: @src\components\ImageUploader\ImageUploader.jsx
 src\components\KeyInput: @src\components\KeyInput\KeyInput.jsx
-src\components\TextOutput: Empty directory
-src\pages: @src\pages\DecryptPage.jsx,  @src\pages\EncryptPage.jsx,  @src\pages\MainPage.jsx
-src\utils: @src\utils\crypto.js,  @src\utils\exif.js
+src\pages: Empty directory
+src\pages\ImageScramble: @src\pages\ImageScramble\ImageScramble.jsx
+src\pages\ImageScramble\nested: Empty directory
+src\pages\TextToExif: @src\pages\TextToExif\TextToExif.jsx
+src\pages\TextToExif\nested: @src\pages\TextToExif\nested\DecryptPage.jsx,  @src\pages\TextToExif\nested\EncryptPage.jsx
+src\types: @src\types\piexifjs.d.ts
+src\utils: @src\utils\crypto.js,  @src\utils\exif.jsx,  @src\utils\scramble.js
